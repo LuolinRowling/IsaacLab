@@ -47,7 +47,7 @@ def main():
     # Set main camera
     # sim.set_camera_view([2.5, 2.5, 2.5], [0.0, 0.0, 0.0])
 
-    cfg = sim_utils.UsdFileCfg(usd_path="/home/liluo/Documents/usds/cameraCfgTest.usd")
+    cfg = sim_utils.UsdFileCfg(usd_path="/home/liluo/repo/IsaacLab/assets/cameraCfgTest.usd")
     cfg.func("/World/cam", cfg)
 
     # stage = omni.usd.get_context().get_stage()
