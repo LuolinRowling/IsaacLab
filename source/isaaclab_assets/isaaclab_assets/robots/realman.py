@@ -22,56 +22,56 @@ from isaaclab.utils.assets import ISAACLAB_NUCLEUS_DIR
 ##
 # Configuration
 ##
-REALMAN_CFG = {}
-# REALMAN_CFG = ArticulationCfg(
-#     spawn=sim_utils.UsdFileCfg(
-#         usd_path=f"/home/liluo/repo/IsaacLab/assets/Realman/rm_75_6f_description.usd",
-#         activate_contact_sensors=False,
-#         rigid_props=sim_utils.RigidBodyPropertiesCfg(
-#             disable_gravity=False,
-#             max_depenetration_velocity=5.0,
-#         ),
-#         articulation_props=sim_utils.ArticulationRootPropertiesCfg(
-#             enabled_self_collisions=True, solver_position_iteration_count=8, solver_velocity_iteration_count=0
-#         ),
-#         # collision_props=sim_utils.CollisionPropertiesCfg(contact_offset=0.005, rest_offset=0.0),
-#     ),
-#     init_state=ArticulationCfg.InitialStateCfg(
-#         joint_pos={
-#             "joint1": 0.0,
-#             "joint2": -0.569,
-#             "joint3": 0.0,
-#             "joint4": -2.210,
-#             "joint5": 0.0,
-#             "joint6": 2.037,
-#             "joint7": 0.741,
-#         },
-#     ),
-#     actuators={
-#         # "realman_shoulder": ImplicitActuatorCfg(
-#         #     joint_names_expr=["joint[1-4]"],
-#         #     effort_limit=87.0,
-#         #     velocity_limit=2.175,
-#         #     stiffness=80.0,
-#         #     damping=4.0,
-#         # ),
-#         # "realman_forearm": ImplicitActuatorCfg(
-#         #     joint_names_expr=["joint[5-7]"],
-#         #     effort_limit=12.0,
-#         #     velocity_limit=2.61,
-#         #     stiffness=80.0,
-#         #     damping=4.0,
-#         # ),
-#         "realman_all": ImplicitActuatorCfg(
-#             joint_names_expr=["joint[1-7]"],
-#             effort_limit=12.0,
-#             velocity_limit=2.61,
-#             stiffness=80.0,
-#             damping=4.0,
-#         ),
-#     },
-#     soft_joint_pos_limit_factor=1.0,
-# )
+
+REALMAN_CFG = ArticulationCfg(
+    spawn=sim_utils.UsdFileCfg(
+        usd_path=f"/home/liluo/repo/IsaacLab/assets/Realman/rm_75_6f_description.usd",
+        activate_contact_sensors=False,
+        rigid_props=sim_utils.RigidBodyPropertiesCfg(
+            disable_gravity=False,
+            max_depenetration_velocity=5.0,
+        ),
+        articulation_props=sim_utils.ArticulationRootPropertiesCfg(
+            enabled_self_collisions=True, solver_position_iteration_count=8, solver_velocity_iteration_count=0
+        ),
+        # collision_props=sim_utils.CollisionPropertiesCfg(contact_offset=0.005, rest_offset=0.0),
+    ),
+    init_state=ArticulationCfg.InitialStateCfg(
+        joint_pos={
+            "joint1": 0.0,
+            "joint2": -0.569,
+            "joint3": 0.0,
+            "joint4": -2.210,
+            "joint5": 0.0,
+            "joint6": 2.037,
+            "joint7": 0.741,
+        },
+    ),
+    actuators={
+        # "realman_shoulder": ImplicitActuatorCfg(
+        #     joint_names_expr=["joint[1-4]"],
+        #     effort_limit=87.0,
+        #     velocity_limit=2.175,
+        #     stiffness=80.0,
+        #     damping=4.0,
+        # ),
+        # "realman_forearm": ImplicitActuatorCfg(
+        #     joint_names_expr=["joint[5-7]"],
+        #     effort_limit=12.0,
+        #     velocity_limit=2.61,
+        #     stiffness=80.0,
+        #     damping=4.0,
+        # ),
+        "realman_all": ImplicitActuatorCfg(
+            joint_names_expr=["joint[1-7]"],
+            effort_limit=12.0,
+            velocity_limit=2.61,
+            stiffness=80.0,
+            damping=4.0,
+        ),
+    },
+    soft_joint_pos_limit_factor=1.0,
+)
 """Configuration of Franka Emika Panda robot."""
 
 
